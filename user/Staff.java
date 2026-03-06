@@ -1,6 +1,6 @@
 package user;
 public class Staff {
-   private int age;
+    private int age;
     private int id;
     private String fullName;
     private String userName;
@@ -8,7 +8,9 @@ public class Staff {
     private String password;
     private String position;
     private double salary;
-    public Staff(String fullName, int age, int id, String userName, String password, String email, String position, double salary) {
+    private boolean isActive;
+
+    public Staff(String fullName, int age, int id, String userName, String password, String email, String position, double salary, boolean isActive) {
         this.fullName = fullName;
         this.age = age;
         this.id = id;
@@ -17,5 +19,7 @@ public class Staff {
         this.email = email;
         this.position = position;
         this.salary = salary;
+        this.isActive = isActive;
     }
 }
+

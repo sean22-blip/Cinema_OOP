@@ -6,13 +6,15 @@ public class Customer {
     private String username;
     private String email;
     private String password;
+    private boolean isActive;
 
-    public Customer(int age, String email, int id, String fullName, String password, String username) {
+    public Customer(int age, String email, int id, String fullName, String password, String username, boolean isActive) {
         this.age = age;
         this.email = email;
         this.id = id;
         this.fullName = fullName;
         this.password = password;
+        this.isActive = isActive;
         this.username = username.toLowerCase();
     }
     //Getters
@@ -50,6 +52,13 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    //methods
+    public boolean isActive(){
+        if(isActive){
+            return true;
+        }
+        return false;
     }
     
 

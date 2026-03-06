@@ -1,7 +1,6 @@
 package controller;
 
 import java.util.ArrayList;
-
 import other.Customer;
 import other.Ticket;
 import user.Staff;
