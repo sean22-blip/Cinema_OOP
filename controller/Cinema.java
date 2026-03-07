@@ -22,23 +22,21 @@ public class Cinema {
     public static final String VIEW_CUSTOMERS = "VIEW_CUSTOMERS";
     public static final String VIEW_ORDERS = "VIEW_ORDERS";
     public static final String UPDATE_ORDER_STATUS = "UPDATE_ORDER_STATUS";
-
+// PENDING	Order is created but not processed yet
+// PROCESSING	Staff is preparing the order or tickets
+// COMPLETED	Order is finished and paid
+// CANCELED	Order was canceled
+// REFUNDED	Payment returned to customer
     //Constructo
-    public Cinema(String cinemaName, double price, int quantity, ArrayList<Staff> staffs, ArrayList<Customer> customers,
-            ArrayList<Ticket> tickets) {
-
-        setCinemaName(cinemaName);
-        setAddress(address);
-
-        staffs = new ArrayList<>();
-        customers = new ArrayList<>();
-        tickets = new ArrayList<>();
+    public Cinema(String cinemaName) {
+        this.cinemaName = cinemaName;
     }
 
     public void setCinemaName(String name) {
-        
+
     }
-    public void setAddress(String address){
+
+    public void setAddress(String address) {
 
     }
 
@@ -58,30 +56,40 @@ public class Cinema {
         return "Currently working!";
     }
 
-    //methods
-    public void addTicket(String name, int qty, double price){
+    public void addTicket(String name, int qty, double price) {
 
     }
+
     public void displayAllTicket() {
 
     }
-    public void createStaff(){
+
+    public void createStaff() {
 
     }
-    public void createCustomer(){
+
+    public void createCustomer() {
 
     }
-    public void createMenuItem(){
+
+    public void createMenuItem() {
 
     }
-    public void createMenuAvailibility(){
+
+    public void createMenuAvailibility() {
     }
-    public void createOrder(){
+
+    public void createOrder() {
 
     }
-    public void viewCustomers(){
-        
+
+    public void viewCustomers() {
+
     }
-    public void viewOrders(){}
-    public void updateOrderStatus(){}
+
+    public void viewOrders() {
+    }
+
+    public void updateOrderStatus() {
+    }
 }

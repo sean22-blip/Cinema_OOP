@@ -5,7 +5,7 @@ import user.Staff;
 
 public class MainCinema {
 //create shop name
-Cinema cinemaShop = new Cinema("Seanima", );
+Cinema cinemaShop = new Cinema("Seanima");
 //create customer
 Customer Sofia = new Customer(25, "Sofia1234@gmail", 100, "Sofia", "1234", "Sofia1234", true);
 //create staff

@@ -1,6 +1,8 @@
 package user;
 
-public class Cashier {
+import controller.Cinema;
+
+public class Cashier extends Staff {
 
     private int age;
     private int id;
@@ -13,80 +15,17 @@ public class Cashier {
     private boolean isActive;
 
     public Cashier(String fullName, int age, int id, String userName, String password, String email, String position, double salary, boolean isActive) {
-        this.fullName = fullName;
-        this.age = age;
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.email = email;
-        this.position = position;
-        this.salary = salary;
-        this.isActive = isActive;
+        super(fullName, age, id, userName, password, email, position, salary, isActive);
+        System.out.println("3) Cashier Constructor!");
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    @Override
+    public boolean can(String action) {
+        return action.equals(Cinema.CREATE_ORDER)
+                || action.equals(Cinema.VIEW_ORDERS)
+                || action.equals(Cinema.VIEW_CUSTOMERS)
+                || action.equals(Cinema.UPDATE_ORDER_STATUS);
+    }//override meeans the child in this case cashier is providing its own method 
+    //with the same name and thee same parameter as the parent aka Staff
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setActive(boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-//needed to implement some function
-    public String getPassword() {
-        return password;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-    
-    
 }
