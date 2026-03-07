@@ -2,12 +2,13 @@ package other;
 import user.Staff;
 
 public class Order {
-    private int orderId;
+    private int orderId = 0;
     private String timeOfPurchase;
+    private double total = 0;
 
     //Classes to serve as attributes for Order class
-    Customer customer;
-    Staff staff;
+    private Customer customer;
+    private Staff staff;
     public Order(int orderId, String timeOfPurchase, Customer customer, Staff staff) {
         this.orderId = orderId;
         this.timeOfPurchase = timeOfPurchase;
@@ -17,8 +18,8 @@ public class Order {
 
     //Getters
     public int getOrderId(){return orderId;}
-    public String getTimeOfPurchase() {return timeOfPurchase;}
     public Customer getCustomer() {return customer;}
+    public String getTimeOfPurchase() {return timeOfPurchase;}
     public Staff getStaff() {return staff;}
 
     //Setters
@@ -27,6 +28,7 @@ public class Order {
 
     //methods
     public void createOrder(){}
+    public void getTotal(){}
     public void printReciept(){}
 
 }

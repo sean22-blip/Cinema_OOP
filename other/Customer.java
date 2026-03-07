@@ -6,22 +6,21 @@ public class Customer {
     private String username;
     private String email;
     private String password;
-    private boolean isActive;
+    private boolean isOnline = true;
 
-    public Customer(int age, String email, int id, String fullName, String password, String username, boolean isActive) {
+    public Customer(int age, String email, int id, String fullName, String password, String username, boolean isOnline) {
         this.age = age;
         this.email = email;
         this.id = id;
         this.fullName = fullName;
         this.password = password;
-        this.isActive = isActive;
-        this.username = username.toLowerCase();
+        this.isOnline = isOnline;
+        this.username = username;
     }
     //Getters
     public int getId() {
         return id;
     }
-
     public int getAge() {
         return age;
     }
@@ -32,6 +31,9 @@ public class Customer {
 
     public String getUsername() {
         return username;
+    }
+    public String getEmail(){
+        return email;
     }
     //Setters
     public void setAge(int age) {
@@ -46,20 +48,36 @@ public class Customer {
         this.username = username;
     }
 
+    public void setPassword(){
+        getEmail();
+    }
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  
     //methods
+
+    public void getPassword(){}
+    public void changePassword(){}
+    public void checkEmail(){}
+    public void changeEmail(){}
+    public void paymentOption(){
+        getId();
+        getPassword();
+    }
+
+
     public boolean isActive(){
-        if(isActive){
-            return true;
+        if(isOnline){
+            return isOnline;
         }
         return false;
     }
+    public void getCustomerService(){
+
+    }
+    
     
 
 
