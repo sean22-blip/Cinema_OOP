@@ -23,4 +23,70 @@ public class Cashier {
         this.salary = salary;
         this.isActive = isActive;
     }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setActive(boolean isActive) {
+        this.isActive = isActive;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+//needed to implement some function
+    public String getPassword() {
+        return password;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+    
+    
 }

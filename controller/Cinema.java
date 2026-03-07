@@ -79,7 +79,9 @@ public class Cinema {
     public void createOrder(){
 
     }
-    public void viewCustomers(){}
+    public void viewCustomers(){
+        
+    }
     public void viewOrders(){}
     public void updateOrderStatus(){}
 }
