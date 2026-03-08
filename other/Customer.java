@@ -1,26 +1,31 @@
 package other;
+
 public class Customer {
+
     private int id;
     private int age;
     private String fullName;
     private String username;
     private String email;
     private String password;
-    private boolean isOnline = true;
+    private boolean isOnline;
 
-    public Customer(int age, String email, int id, String fullName, String password, String username, boolean isOnline) {
-        this.age = age;
-        this.email = email;
-        this.id = id;
-        this.fullName = fullName;
-        this.password = password;
+public Customer(String fullName, int age, int id, String email, String username, String password, boolean isOnline) {
+
+        setFullName(fullName);
+        setUsername(username);
+        setAge(age);
+        setEmail(email);
+        setPassword(password);
+
         this.isOnline = isOnline;
-        this.username = username;
     }
+
     //Getters
     public int getId() {
         return id;
     }
+
     public int getAge() {
         return age;
     }
@@ -32,9 +37,11 @@ public class Customer {
     public String getUsername() {
         return username;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
+
     //Setters
     public void setAge(int age) {
         this.age = age;
@@ -48,37 +55,38 @@ public class Customer {
         this.username = username;
     }
 
-    public void setPassword(){
+    public void setPassword(String password) {
         getEmail();
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-  
     //methods
+    public void getPassword() {
+    }
 
-    public void getPassword(){}
-    public void changePassword(){}
-    public void checkEmail(){}
-    public void changeEmail(){}
-    public void paymentOption(){
+    public void changePassword() {
+    }
+
+    public void checkEmail() {
+    }
+
+    public void changeEmail() {
+    }
+
+    public void paymentOption() {
         getId();
         getPassword();
     }
 
-
-    public boolean isActive(){
-        if(isOnline){
-            return isOnline;
-        }
-        return false;
+    public void setActive(boolean isOnline) {
+        this.isOnline = isOnline;
     }
-    public void getCustomerService(){
+
+    public void getCustomerService() {
 
     }
-    
-    
-
 
 }

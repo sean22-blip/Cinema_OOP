@@ -2,15 +2,7 @@ package user;
 
 import controller.Cinema;
 
-public class ManagerStaff extends Staff {
-
-    private int staffId;
-    private int age;
-    private String fullName;
-    private String userName;
-    private String email;
-    private String password;
-    private String address;
+public class ManagerStaff extends Staff{
 
     public ManagerStaff(String fullName, int age, int id, String userName, String password, String email, String position, double salary, boolean isActive) {
         super(fullName, age, id, userName, password, email, position, salary, isActive);

@@ -5,28 +5,31 @@ public class Ticket {
     private int id;
     private double price;
     private boolean isavailale;
-    private int soldQty = 0;
-    public Ticket(int id, String name, double price, boolean  isavailable, int soldQty) {
+    private int qty;
+
+    public Ticket(int id, String name, double price, boolean isavailable, int Qty) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.isavailale = isavailable;
+        this.qty = qty;
     }
 
-    public String getName() {return name;}
-    public int getId() {return id;}
-    public double getPrice() {return price;}
+    public String getName() {
+        return name;
+    }
 
+    public int getId() {
+        return id;
+    }
 
-    public String addTick(String name, int qty, double price){
-        return "successfully added" + name + "with a price of: " + price;
+    public double getPrice() {
+        return price;
     }
 
     @Override
     public String toString() {
         return "Ticket [name=" + name + ", price=" + price + ", isavailale=" + isavailale + "]";
     }
-    //methods
-    
-    
+
 }

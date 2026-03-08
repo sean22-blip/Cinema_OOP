@@ -26,7 +26,7 @@ public abstract class Staff implements IStaff {//IStaff is the parents and Staff
         this.position = position;
         this.salary = salary;
         this.isActive = isActive;
-        System.out.println("1) Staff Constructor");
+        System.out.println("1) Staff is created from Staff Constructor!");
     }
 
     public void setAge(int age) {

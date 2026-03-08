@@ -1,7 +1,9 @@
 package controller;
 
 import java.util.ArrayList;
+
 import other.Customer;
+import other.Order;
 import other.Ticket;
 import user.Staff;
 
@@ -13,6 +15,7 @@ public class Cinema {
     private ArrayList<Staff> staffs;
     private ArrayList<Customer> Customers;
     private ArrayList<Ticket> tickets;
+    private ArrayList<Order> orders;
 
     public static final String CREATE_STAFF = "CREATE_STAFF";
     public static final String CREATE_CUSTOMER = "CREATE_CUSTOMER";
@@ -27,21 +30,25 @@ public class Cinema {
 // COMPLETED	Order is finished and paid
 // CANCELED	Order was canceled
 // REFUNDED	Payment returned to customer
-    //Constructo
-    public Cinema(String cinemaName) {
+
+    public Cinema(String cinemaName, String address) {
         this.cinemaName = cinemaName;
+        this.address = address;
+        this.staffs = new ArrayList<>();
+        this.Customers = new ArrayList<>();
+        this.tickets = new ArrayList<>();
+        this.orders = new ArrayList<>();
+        getCinemaName();
+        getAddress();
     }
 
-    public void setCinemaName(String name) {
 
+    public String getCinemaName() {
+        return "Name: " + cinemaName;
     }
 
-    public void setAddress(String address) {
-
-    }
-
-    public String getName() {
-        return cinemaName;
+    public String getAddress() {
+        return "=========== Location =============" + address + "\n=================================";
     }
 
     public String getStaffs() {
@@ -64,16 +71,16 @@ public class Cinema {
 
     }
 
-    public void createStaff() {
+    public void createStaff(Staff staff) {
+        staffs.add(staff);
+    }
+
+    public void createCustomer(Customer customer) {
 
     }
 
-    public void createCustomer() {
-
-    }
-
-    public void createMenuItem() {
-
+    public void createMenuItem(Ticket ticket) {
+        tickets.add(ticket);
     }
 
     public void createMenuAvailibility() {

@@ -1,23 +1,12 @@
 package user;
 
 import controller.Cinema;
-
 public class Cashier extends Staff {
-
-    private int age;
-    private int id;
-    private String fullName;
-    private String userName;
-    private String email;
-    private String password;
-    private String position;
-    private double salary;
-    private boolean isActive;
-
     public Cashier(String fullName, int age, int id, String userName, String password, String email, String position, double salary, boolean isActive) {
         super(fullName, age, id, userName, password, email, position, salary, isActive);
-        System.out.println("3) Cashier Constructor!");
+        System.out.println("3) Cashier is being created from Constructor!");
     }
+
 
     @Override
     public boolean can(String action) {
