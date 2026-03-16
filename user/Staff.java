@@ -13,9 +13,7 @@ public abstract class Staff implements IStaff {//IStaff is the parents and Staff
     private boolean isActive;
 
     @Override
-    public boolean can(String action){
-        return false;
-    }
+    public abstract boolean can(String action);
     public Staff(String fullName, int age, int id, String userName, String password, String email, String position, double salary, boolean isActive) {
         this.fullName = fullName;
         this.age = age;
